@@ -70,6 +70,8 @@
                                     </thead>
                                     <tbody>
                                     <tr class="gradeX" th:each="user: ${users.records}">
+<!--                                        <tr class="gradeX" th:each="user,stats:${users} user是每一个元素,stats是状态.${users}是从request域中取出的对象>
+                                               遍历出的序号,1开始 <td th:text=${stats.count}-->
                                         <td th:text="${user.id}"></td>
                                         <td>[[${user.name}]]</td>
                                         <td th:text="${user.age}">Win 95+</td>

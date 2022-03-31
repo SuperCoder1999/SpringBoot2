@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--采用th:fragment="xxx" 和
+th:insert="页面名.xxx"全部保留
+th:replace=""去掉外部div,用div代替
+th:include=""保留外部div,去掉替换者的div
+
+id="xx"和
+th:replace="页面名 :: #xx-->
 <head th:fragment="commonheader">
     <!--common-->
+<!--使用 thymeleaf 修改为项目中的路径 th:href="@{/css/style.css} 具体原因还不清楚-->
     <link href="css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
-    <link href="css/style-responsive.css" th:href="@{/css/style-responsive.css}" rel="stylesheet">
+    <link href="css/style-responsive.css " th:href="@{/css/style-responsive.css}" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

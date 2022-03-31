@@ -29,7 +29,7 @@
             <img src="images/login-logo.png" alt=""/>
         </div>
         <div class="login-wrap">
-            <label style="color: red" th:text="${msg}"></label> <!--错误提示信息-->
+            <label style="color: red" th:text="${session.msg}"></label> <!--错误提示信息-->
             <input type="text" name="userName" class="form-control" placeholder="User ID" autofocus>
             <input type="password" name="password" class="form-control" placeholder="Password">
             <button class="btn btn-lg btn-login btn-block" type="submit">

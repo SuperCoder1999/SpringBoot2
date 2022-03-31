@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="js/morris-chart/morris.css">
 
     <div th:include="common :: commonheader"> </div>
+<!--    使用th:include,是因为不想要head标签,保留div标签(div也是错误的,不应该保留.)-->
 </head>
 
 <body class="sticky-header">
@@ -544,6 +545,7 @@
 </section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
+<!--提取的js公共代码-->
 <div th:replace="common :: #commonscript"></div>
 
 <!--easy pie chart-->
