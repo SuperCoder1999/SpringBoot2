@@ -14,8 +14,8 @@
         <version>2.3.4.RELEASE</version>
     </parent>
 
-<!-- 可以修改默认版本号
-   1、查看spring-boot-dependencies里面规定当前依赖的版本 用的 key。
+    <!-- 可以修改默认版本号
+   1、查看spring-boot-dependencies里面规定当前依赖的版本 用的 key(比如<mysql.version>)。
    2、在当前项目里面重写配置-->
     <!--<properties>
         <mysql.version>5.1.43</mysql.version>
@@ -27,12 +27,25 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--简化JavaBean开发-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--ctrl+f9就可以跟新项目(针对静态页面只是刷新; 针对类等功能性内容需要重启)-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--尝试修改依赖包的版本-->
         <!--<dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>-->
     </dependencies>
-
 
 
     <build>

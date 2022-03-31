@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true # 配置rest风格支持
+    contentnegotiation:
+      favor-parameter: true
+  #  mvc:
+  #    static-path-pattern: /res/**
+  # 静态资源访问前缀(这个会导致welcome page/自定义favicon功能失效)
+  web:
+    resources:
+      static-locations:
+        [classpath:/haha/]
+#修改默认的静态资源存放位置.此时更改为resources下的haha文件夹内.idea中要求用web.resources.static-location=[..]
+#    add-mappings: true
+# false 禁用所有静态资源规则(xml中的配置即:spring.resources.add-mappings=false,
+# 验证了: ResourceProperties resourceProperties从容器中获取和前缀为spring.resources绑定的所有的值的对象)
+
+#    cache:
+#      period: 11000
+# 配置浏览器中静态资源的缓存时间 秒
+#server:
+#  servlet:
+#    context-path: /world #项目访问路径.类似原本的项目名称
+
