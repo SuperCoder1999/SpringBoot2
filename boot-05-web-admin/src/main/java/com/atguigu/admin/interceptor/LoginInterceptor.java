@@ -27,6 +27,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
+        log.info("拦截器工作");
         //测试拦截路径(看是否拦截了static下的静态资源)
         String requestURI = request.getRequestURI();
         log.info("preHandle拦截的请求路径是{}",requestURI);
@@ -36,7 +37,6 @@ public class LoginInterceptor implements HandlerInterceptor {
         HttpSession session = request.getSession();
 
         Object loginUser = session.getAttribute("loginUser");
-
         if(loginUser != null){
             //放行
             return true;
@@ -49,6 +49,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         session.setAttribute("msg", "session域中的提示:登录");
         response.sendRedirect("/");
         return false;
+
     }
 
     /**

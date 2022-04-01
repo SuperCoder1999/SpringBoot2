@@ -69,17 +69,17 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr class="gradeX" th:each="user: ${users.records}">
-<!--                                        <tr class="gradeX" th:each="user,stats:${users} user是每一个元素,stats是状态.${users}是从request域中取出的对象>
-                                               遍历出的序号,1开始 <td th:text=${stats.count}-->
-                                        <td th:text="${user.id}"></td>
-                                        <td>[[${user.name}]]</td>
-                                        <td th:text="${user.age}">Win 95+</td>
-                                        <td th:text="${user.email}">4</td>
-                                        <td>
-                                            <a th:href="@{/user/delete/{id}(id=${user.id},pn=${users.current})}" class="btn btn-danger btn-sm" type="button">删除</a>
-                                        </td>
-                                    </tr>
+<!--                                    <tr class="gradeX" th:each="user: ${users.records}">-->
+<!--&lt;!&ndash;                                        <tr class="gradeX" th:each="user,stats:${users} user是每一个元素,stats是状态.${users}是从request域中取出的对象>-->
+<!--                                               遍历出的序号,1开始 <td th:text=${stats.count}&ndash;&gt;-->
+<!--                                        <td th:text="${user.id}"></td>-->
+<!--                                        <td>[[${user.name}]]</td>-->
+<!--                                        <td th:text="${user.age}">Win 95+</td>-->
+<!--                                        <td th:text="${user.email}">4</td>-->
+<!--                                        <td>-->
+<!--                                            <a th:href="@{/user/delete/{id}(id=${user.id},pn=${users.current})}" class="btn btn-danger btn-sm" type="button">删除</a>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
                                     </tfoot>
                                 </table>
 
@@ -93,9 +93,9 @@
                                         <div class="dataTables_paginate paging_bootstrap pagination">
                                             <ul>
                                                 <li class="prev disabled"><a href="#">← 前一页</a></li>
-                                                <li th:class="${num == users.current?'active':''}" th:each="num:${#numbers.sequence(1,users.pages)}" >
+                                                <!--<li th:class="${num == users.current?'active':''}" th:each="num:${#numbers.sequence(1,users.pages)}" >
                                                     <a th:href="@{/dynamic_table(pn=${num})}">[[${num}]]</a>
-                                                </li>
+                                                </li>-->
                                                 <li class="next disabled"><a href="#">下一页 → </a></li>
                                             </ul>
                                         </div>

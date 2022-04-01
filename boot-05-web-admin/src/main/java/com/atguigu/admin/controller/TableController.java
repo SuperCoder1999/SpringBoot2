@@ -1,20 +1,12 @@
 package com.atguigu.admin.controller;
 
 
-import com.atguigu.admin.bean.User;
 /*import com.atguigu.admin.exception.UserTooManyException;
 import com.atguigu.admin.service.UserService;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;*/
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.Arrays;
-import java.util.List;
+        import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class TableController {
@@ -23,15 +15,17 @@ public class TableController {
     /*@Autowired
     UserService userService;
 
-    *//**
+    *//*
      *
      * @param a  不带请求参数或者参数类型不对  400；Bad Request  一般都是浏览器的参数没有传递正确
      * @return
      */
     @GetMapping("/basic_table")
-    public String basic_table(@RequestParam("a") int a){
+    //@RequestParam("a") int a引出手动配置错误响应:因为没有a的值会报错400,error下没有这个相应页面
+    public String basic_table(/*@RequestParam("a") int a*/){
 
-        //int i = 10/0;
+        //用于测试默认错误响应页面:error/5xx.html
+         //int i = 10/0;
         return "table/basic_table";
     }
 
@@ -48,8 +42,9 @@ public class TableController {
 
 
     @GetMapping("/dynamic_table")
-    public String dynamic_table(@RequestParam(value="pn",defaultValue = "1") Integer pn,Model model){
+    public String dynamic_table(/*@RequestParam(value="pn",defaultValue = "1") Integer pn,Model model*/){
         //表格内容的遍历
+//        如果在程序中任何位置,调用这个方法,就会停止当前请求,转发出去/error请求,进行处理异常
 //        response.sendError
 //     List<User> users = Arrays.asList(new User("zhangsan", "123456"),
 //                new User("lisi", "123444"),
@@ -57,9 +52,11 @@ public class TableController {
 //                new User("hehe ", "aaddd"));
 //        model.addAttribute("users",users);
 //
-//        if(users.size()>3){
-//            throw new UserTooManyException();
-//        }
+        //通过ResponseStatus,定义异常处理器
+/*        if(users.size()>3){
+            throw new UserTooManyException();
+        }*/
+
         //从数据库中查出user表中的用户进行展示
 
        /* //构造分页参数
@@ -75,7 +72,7 @@ public class TableController {
 
        // model.addAttribute("users",userPage);
 
-        return "table/dynamic_table";
+        return "dynamic_table";
     }
 
 
