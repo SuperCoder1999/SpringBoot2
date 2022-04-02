@@ -2,7 +2,9 @@ package com.atguigu.admin.controller;
 
 
 
+import com.atguigu.admin.bean.Account;
 import com.atguigu.admin.bean.User;
+import com.atguigu.admin.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
@@ -77,47 +80,6 @@ public class IndexController {
 //        model.addAttribute("sqlCount",s1);
 
         return "main";
-    }
-
-
-    @Autowired
-    JdbcTemplate jdbcTemplate;
-
-    /*@Autowired
-    AccountService accountService;
-
-    @Autowired
-    CityService cityService;
-
-    //    @Autowired
-    StringRedisTemplate redisTemplate;
-
-    @ResponseBody
-    @PostMapping("/city")
-    public City saveCity(City city){
-
-        cityService.saveCity(city);
-        return city;
-    }
-
-    @ResponseBody
-    @GetMapping("/city")
-    public City getCityById(@RequestParam("id") Long id){
-        return cityService.getById(id);
-    }
-
-    @ResponseBody
-    @GetMapping("/acct")
-    public Account getById(@RequestParam("id") Long id){
-
-        return accountService.getAcctByid(id);
-    }*/
-
-    @ResponseBody
-    @GetMapping("/sql")
-    public String queryFromDb(){
-        Long aLong = jdbcTemplate.queryForObject("select count(*) from account_tbl", Long.class);
-        return aLong.toString();
     }
 
 }

@@ -59,7 +59,7 @@ public class AdminWebConfig implements WebMvcConfigurer{
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns("/**")  //所有请求都被拦截包括静态资源
                 .excludePathPatterns("/","/login","/css/**","/fonts/**","/images/**",
-                        "/js/**","/aa/**"); //放行的请求
+                        "/js/**","/aa/**", "/sql","/insertCity"); //放行的请求
         //疑问: 这里的css等静态资源,也会因为没有session被返回到主页面.并且还请求了 /error请求
            /*也可以采用在application.properties中设置spring.mvc.static-path-pattern=/static
            此时,页面中访问静态资源的连接,都要添加:/static(/static/css/...).此时这里就可以只放开/static/**

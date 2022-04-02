@@ -5,28 +5,22 @@ spring:
     password: N331150871
     driver-class-name: com.mysql.jdbc.Driver
 
-  #    type: com.zaxxer.hikari.HikariDataSource
-  jdbc:
-    template:
-      query-timeout: 3
-
-
 #    手动创建连接池时,配置的监控,连接池设置:
 #    filters: stat,wall
 #    max-active: 10
 
-#利用官方 druid-starter 时需要配置的设置:
+  #利用官方 druid-starter 时需要配置的设置:
     druid:
       aop-patterns: com.atguigu.admin.*  #springbean监控 admin下的所有组件
       filters: stat,wall,slf4j  #所有开启的功能
 
       stat-view-servlet:  #监控页配置
- #开启stat-view
+  #开启stat-view
         enabled: true
- #设置账号密码
+  #设置账号密码
         login-username: admin
         login-password: admin
-#重置按钮
+  #重置按钮
         resetEnable: false
 
       web-stat-filter:  #web监控
@@ -46,8 +40,23 @@ spring:
             drop-table-allow: false  #不允许删除
             update-allow: false  #更新操作被拦截
 
-#
-#
+
+  #    type: com.zaxxer.hikari.HikariDataSource
+  jdbc:
+    template:
+      query-timeout: 3
+
+# 配置mybatis规则、使用MyBatisPlus则此项配置无效
+mybatis:
+#全局配置文件
+#可以不写全局配置文件，所有全局配置文件的配置都放在configuration配置项中即可
+#  config-location: classpath:mybatis/mybatis-config.xml
+  #映射文件
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:  # 指定mybatis全局配置文件中的相关配置项
+    map-underscore-to-camel-case: true
+
+
 #      redis:
 #        host: r-bp1nc7reqesxisgxpipd.redis.rds.aliyuncs.com
 #        port: 6379
@@ -77,12 +86,7 @@ spring:
 #
 #
 #
-#    # 配置mybatis规则、使用MyBatisPlus则此项配置无效
-#    #mybatis:
-#    ##  config-location: classpath:mybatis/mybatis-config.xml
-#    #  mapper-locations: classpath:mybatis/mapper/*.xml
-#    #  configuration:  # 指定mybatis全局配置文件中的相关配置项
-#    #    map-underscore-to-camel-case: true
+
 #
 #
 #    # management 是所有actuator的配置

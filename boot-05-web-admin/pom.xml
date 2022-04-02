@@ -36,13 +36,18 @@
             <artifactId>druid</artifactId>
             <version>1.1.17</version>
         </dependency>-->
-        <!--使用使用官方starter方式创建数据源-->
+        <!--使用使用druid官方starter方式创建数据源-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.17</version>
         </dependency>
-
+        <!--使用myBatis官方starter方式使用mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.4</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
