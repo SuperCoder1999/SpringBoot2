@@ -54,7 +54,7 @@ mybatis:
   #映射文件
   mapper-locations: classpath:mybatis/mapper/*.xml
   configuration:  # 指定mybatis全局配置文件中的相关配置项
-    map-underscore-to-camel-case: true
+    map-underscore-to-camel-case: true #mybatis-plus中是默认驼峰的
 
 
 #      redis:

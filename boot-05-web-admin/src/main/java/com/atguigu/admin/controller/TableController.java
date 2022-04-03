@@ -40,22 +40,34 @@ public class TableController {
         return "redirect:/dynamic_table";
     }*/
 
+/*
+    //用于测试 异常处理
+    @GetMapping("/dynamic_table")
+    public String dynamic_table(){
+//        1.如果在程序中任何位置,调用这个方法,就会停止当前请求,转发出去/error请求,进行处理异常
+//        response.sendError;
 
+        //2.通过ResponseStatus,定义异常处理器
+//        if(users.size()>3){
+//            throw new UserTooManyException();
+//        }
+
+        return "table/dynamic_table";
+    }*/
+
+    /**
+     * 使用MyBatis-Plus
+     */
     @GetMapping("/dynamic_table")
     public String dynamic_table(/*@RequestParam(value="pn",defaultValue = "1") Integer pn,Model model*/){
         //表格内容的遍历
-//        如果在程序中任何位置,调用这个方法,就会停止当前请求,转发出去/error请求,进行处理异常
-//        response.sendError
+
 //     List<User> users = Arrays.asList(new User("zhangsan", "123456"),
 //                new User("lisi", "123444"),
 //                new User("haha", "aaaaa"),
 //                new User("hehe ", "aaddd"));
 //        model.addAttribute("users",users);
 //
-        //通过ResponseStatus,定义异常处理器
-/*        if(users.size()>3){
-            throw new UserTooManyException();
-        }*/
 
         //从数据库中查出user表中的用户进行展示
 
@@ -69,10 +81,9 @@ public class TableController {
 //        userPage.getCurrent()
 //        userPage.getPages()
 
-
        // model.addAttribute("users",userPage);
 
-        return "dynamic_table";
+        return "table/dynamic_table";
     }
 
 
