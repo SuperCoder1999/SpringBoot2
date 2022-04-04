@@ -1,5 +1,7 @@
 package com.atguigu.admin;
 
+import com.atguigu.admin.bean.User;
+import com.atguigu.admin.mapper.UserMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +14,7 @@ import javax.sql.DataSource;
 @SpringBootTest
 class Boot05WebAdminApplicationTests {
 
-    @Autowired
-    JdbcTemplate jdbcTemplate;
-
-    @Autowired
-    DataSource dataSource;
-
-    /*@Autowired
-    UserMapper userMapper;
-
-
+/*
     @Autowired
     StringRedisTemplate redisTemplate;
 
@@ -31,7 +24,14 @@ class Boot05WebAdminApplicationTests {
 
 */
 
+    /**
+     * 测试数据源datasource(利用jdbc)
+     */
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    DataSource dataSource;
     @Test
     void contextLoads() {
 
@@ -44,11 +44,17 @@ class Boot05WebAdminApplicationTests {
 
     }
 
-    /*@Test
+    /**
+     * 测试Mybatis-plus
+     */
+    @Autowired
+    UserMapper userMapper;
+    @Test
     void testUserMapper(){
+        //使用的是BaseMapper中的方法
         User user = userMapper.selectById(1L);
         log.info("用户信息：{}",user);
-    }*/
+    }
 
 
     /*@Test

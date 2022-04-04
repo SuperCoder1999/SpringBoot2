@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class DataSource_MybatisController {
 
-    //测试druid查询数据.  并且测试druid监控组件
+    //测试从druid数据源查询数据.并且测试druid监控组件
     @Autowired
-    JdbcTemplate jdbcTemplate;
+    JdbcTemplate jdbcTemplate;//jdbc是
 
     @ResponseBody
     @GetMapping("/sql")
@@ -28,13 +28,18 @@ public class DataSource_MybatisController {
         return aLong.toString();
     }
 
-
-
+    /**
+     * 测试 整合Mybatis-plus的三种方式
+     */
 
     @Autowired
     CityService cityService;
+    //注意: mybatis等mapper-service结构中,引用service的地方都是用接口.
+    //原理是: 其实这里 @Autowired 的意义是->CityService cityService= new CityServiceImpl();
+    //      因为类CityServiceImpl才是被注入到iOC容器的
 
     //3.测试使用注解+Mapper.xml配置文件的方式,使用mybatis
+
     @ResponseBody
     @PostMapping("/insertCity") //这里需要使用Postman发送请求
     public City insertCity(City city) {
@@ -61,6 +66,9 @@ public class DataSource_MybatisController {
     }
 
 
+    /**
+     * 测试Redis
+     */
 /*
     //    @Autowired
     StringRedisTemplate redisTemplate;

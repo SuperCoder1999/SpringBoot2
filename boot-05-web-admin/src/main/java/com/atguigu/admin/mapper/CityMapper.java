@@ -5,8 +5,10 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 //@Mapper
+@Repository
 public interface CityMapper {
 
     //利用mybatis中的用纯注解方式,代替了CityMapper.xml,所以resources包下面 不需要mybatis包

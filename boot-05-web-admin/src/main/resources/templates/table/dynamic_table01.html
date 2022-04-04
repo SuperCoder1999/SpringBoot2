@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <title>第一张表的不用Page功能输出</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="">
@@ -10,11 +17,11 @@
     <title>Dynamic Table</title>
 
     <!--dynamic table-->
-    <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet" />
-    <link href="js/advanced-datatable/css/demo_table.css" rel="stylesheet" />
-    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css" />
+    <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet"/>
+    <link href="js/advanced-datatable/css/demo_table.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css"/>
 
-    <div th:include="common :: commonheader"> </div>
+    <div th:include="common :: commonheader"></div>
 </head>
 
 <body class="sticky-header">
@@ -25,7 +32,7 @@
     <!-- left side end-->
 
     <!-- main content start-->
-    <div class="main-content" >
+    <div class="main-content">
 
         <!-- header section start-->
         <div class="header-section">
@@ -36,7 +43,7 @@
 
             <!--search start-->
             <form class="searchform" action="index.html" method="post">
-                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+                <input type="text" class="form-control" name="keyword" placeholder="Search here..."/>
             </form>
             <!--search end-->
 
@@ -57,7 +64,9 @@
                                             <div>Database update</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                            <div style="width: 40%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="40" role="progressbar"
+                                                 class="progress-bar progress-bar-warning">
                                                 <span class="">40%</span>
                                             </div>
                                         </div>
@@ -69,7 +78,9 @@
                                             <div>Dashboard done</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
+                                            <div style="width: 90%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="90" role="progressbar"
+                                                 class="progress-bar progress-bar-success">
                                                 <span class="">90%</span>
                                             </div>
                                         </div>
@@ -81,7 +92,9 @@
                                             <div>Web Development</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
+                                            <div style="width: 66%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="66" role="progressbar"
+                                                 class="progress-bar progress-bar-info">
                                                 <span class="">66% </span>
                                             </div>
                                         </div>
@@ -93,7 +106,9 @@
                                             <div>Mobile App</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
+                                            <div style="width: 33%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="33" role="progressbar"
+                                                 class="progress-bar progress-bar-danger">
                                                 <span class="">33% </span>
                                             </div>
                                         </div>
@@ -105,7 +120,8 @@
                                             <div>Issues fixed</div>
                                         </div>
                                         <div class="progress progress-striped">
-                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                                            <div style="width: 80%" aria-valuemax="100" aria-valuemin="0"
+                                                 aria-valuenow="80" role="progressbar" class="progress-bar">
                                                 <span class="">80% </span>
                                             </div>
                                         </div>
@@ -125,16 +141,17 @@
                             <ul class="dropdown-list normal-list">
                                 <li class="new">
                                     <a href="">
-                                        <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
+                                        <span class="thumb"><img src="images/photos/user1.png" alt=""/></span>
                                         <span class="desc">
-                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+                                          <span class="name">John Doe <span
+                                                  class="badge badge-success">new</span></span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
                                         </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="images/photos/user2.png" alt="" /></span>
+                                        <span class="thumb"><img src="images/photos/user2.png" alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Jonathan Smith</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -143,7 +160,7 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                                        <span class="thumb"><img src="images/photos/user3.png" alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Jane Doe</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -152,7 +169,7 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
+                                        <span class="thumb"><img src="images/photos/user4.png" alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Mark Henry</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -161,7 +178,7 @@
                                 </li>
                                 <li>
                                     <a href="">
-                                        <span class="thumb"><img src="images/photos/user5.png" alt="" /></span>
+                                        <span class="thumb"><img src="images/photos/user5.png" alt=""/></span>
                                         <span class="desc">
                                           <span class="name">Jim Doe</span>
                                           <span class="msg">Lorem ipsum dolor sit amet...</span>
@@ -214,13 +231,13 @@
                     </li>
                     <li>
                         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            <img src="images/photos/user-avatar.png" alt="" />
+                            <img src="images/photos/user-avatar.png" alt=""/>
                             John Doe
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                            <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                             <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
                         </ul>
                     </li>
@@ -244,7 +261,7 @@
                 <li>
                     <a href="#">Data Tables</a>
                 </li>
-                <li class="active"> Dynamic Table </li>
+                <li class="active"> Dynamic Table</li>
             </ul>
         </div>
         <!-- page heading end-->
@@ -689,8 +706,52 @@
                                     </tr>
                                     </tfoot>
                                 </table>-->
-<!--                    第一张表 original_table.html中-->
-<!--                    第一张表的第一个输出形式是: 用Mybatis-plus中的 Page功能 -->
+                                <!--第一张表 original_table.html中-->
+                                <!--第一张表的第一个输出形式是: 不用Mybatis-plus中的 Page功能 -->
+                                <table class="display table table-bordered table-striped" id="dynamic-table">
+                                    <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>id</th>
+                                        <th>name</th>
+                                        <th>age</th>
+                                        <th>email</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                        <tr class="gradeX odd" th:each="user,stat:${users}">
+                                            <td th:text="${stat.count}">序号</td>
+                                            <td th:text="${user.id}">id</td>
+                                            <td class="" th:text="${user.name}"></td>
+                                            <td th:text="${user.age}"></td>
+                                            <td>[[${user.email}]]</td>
+                                            <td>操作X</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+<!--                                复制来的 分页条-->
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <div class="dataTables_info" id="dynamic-table_info">当前第 1 页 总计 10 页 共 5
+                                            条记录
+                                        </div>
+                                    </div>
+                                    <div class="span6">
+                                        <div class="dataTables_paginate paging_bootstrap pagination">
+                                            <ul>
+                                                <li class="prev disabled"><a href="#">← Previous</a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li class="next"><a href="#">Next → </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -710,28 +771,26 @@
                             <div class="adv-table">
                                 <table class="display table table-bordered" id="hidden-table-info">
 <!--                                    ======== 原来的固定表,改成由
-                    com.atguigu.admin.controller.TableController下
-                     ================  简化前端页面(遍历域数据,形成表格) =====================-->
+                                com.atguigu.admin.controller.TableController下
+                                 ================  简化前端页面(遍历域数据,形成表格) =====================-->
                                     <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>序号</th>
                                         <th>用户名</th>
-                                        <th >密码</th>
+                                        <th>密码</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr class="gradeX" th:each="user,stats:${users2}">
 <!--                                        <tr class="gradeX" th:each="user,stats:${users} user是每一个元素,stats(stat)是状态.${users}是从request域中取出的对象>
-                                遍历出的序号从1开始 <td th:text="${stats.count}">序号</td>-->
+                                            遍历出的序号从1开始 <td th:text="${stats.count}">序号</td>-->
                                         <td th:text="${stats.count}">序号</td>
-                                        <td>#</td>
-                                        <td th:text="user.userName">userName</td>
+                                        <td th:text="${user.userName}">userName</td>
                                         <td>[[${user.password}]]</td>
                                     </tr>
                                     </tbody>
                                 </table>
-<!--                                    dynamic_table.html页面的第二个表==>original_table.html-->
-
+                                <!--ynamic_table.html页面的原第二个表==>original_table.html-->
 
                             </div>
                         </div>
@@ -765,11 +824,15 @@
 <!--dynamic table-->
 <script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
-<!--dynamic table initialization -->
-<script src="js/dynamic_table_init.js"></script>
+
+<!--dynamic table initialization 包含了原始js分页功能(之后用我们自己写的)-->
+<!--<script src="js/dynamic_table_init.js"></script>-->
 <!--
 common scripts for all pages
 <script src="js/scripts.js"></script>-->
+
+</body>
+</html>
 
 </body>
 </html>
